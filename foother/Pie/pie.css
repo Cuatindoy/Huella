@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+footer{
+
+    background: #58e412;
+    color: rgb(235, 235, 235);
+}

@@ -1,0 +1,134 @@
+*{
+ margin: 0;   
+ box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+
+.header{
+   background-color:#A3F4FF ; 
+   height: 100px;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: #7a7a7a;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 100px;
+}
+
+.nav-menu{
+     display: flex;
+     margin-right: 40px;
+     list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 100px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link{
+   padding: 8px 12px;
+   border-radius: 3px; 
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_avtive{
+   background-color: #00A7BC ;
+   transition: 0.5s;
+}
+
+.nav-toggle{
+color: white;
+background: none;
+border: none;
+font-size: 30px;
+padding: 0 20px;
+line-height: 60px;
+cursor: pointer;
+
+display: none;
+}
+
+@media screen and (max-width:768px){
+
+    body{
+        padding-top: 70px 20px 0;
+    }
+    
+    .header{
+       height: 85px;
+    
+    }
+    
+    .logo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 85px;
+    }
+    
+    .nav-menu{
+         flex-direction: column;
+         align-items: center;
+         margin-right: 20px;
+         background-color: #5dcccc; 
+         position: fixed;
+         left: 0;
+         top: 85px;
+         width: 100%;
+         padding: 20px 0;
+
+         height: calc(100% - 60px) ;
+         overflow-y: auto;
+
+         left: 100%;
+         transition: left 0.3s ;
+    }
+    
+    .nav-menu-item{
+        line-height: 90px;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_avtive{
+       background: none ;
+       color: #BB8FCE ;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+      left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+        outline:none ;
+    }
+
+}
